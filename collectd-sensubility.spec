@@ -1,8 +1,9 @@
 
-%global golang_namespace github.com/paramite
+%global golang_namespace github.com/infrawatch
+%undefine _debugsource_packages
 
 Name:           collectd-sensubility
-Version:        0.1.4
+Version:        0.1.5
 Release:        1%{?dist}
 Summary:        collectd-exec extension enabling collectd to bahave like sensu-client
 License:        ASL 2.0
@@ -24,8 +25,8 @@ This project aims provide possibility to switch from Sensu based availability mo
 %autosetup -n %{name}-%{version}
 
 %build
-mkdir -p src/github.com/paramite
-ln -s ../../../ src/github.com/paramite/collectd-sensubility
+mkdir -p src/github.com/infrawatch
+ln -s ../../../ src/github.com/infrawatch/collectd-sensubility
 export GOPATH=$(pwd):%{gopath}
 go build -a -ldflags "-B 0x$(head -c20 /dev/urandom|od -An -tx1|tr -d ' \n')" -v -x -o collectd-sensubility main/main.go
 
@@ -43,6 +44,9 @@ install -p -m 0755 %{SOURCE1} %{buildroot}%{_sysconfdir}/collectd-sensubility.co
 %{_sysconfdir}/collectd-sensubility.conf
 
 %changelog
+* Tue May 12 2020 Martin Mágr <mmagr@redhat.com> - 0.1.5-1
+- Fix config issue (rhbz#1827023)
+
 * Wed Aug 21 2019 Martin Mágr <mmagr@redhat.com> - 0.1.4-1
 - Unbundled dependencies
 
