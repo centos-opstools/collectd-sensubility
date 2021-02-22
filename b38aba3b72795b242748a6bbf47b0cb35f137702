@@ -16,6 +16,24 @@
       "revId": "b38aba3b72795b242748a6bbf47b0cb35f137702",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "888e40f3_774d53c6",
+        "filename": "collectd-sensubility.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 314
+      },
+      "writtenOn": "2021-02-22T23:09:22Z",
+      "side": 1,
+      "message": "Huh ... is the job using some special build target? Not sure if there could be any other reason than CI failing, and manual build working:\nhttp://paste.openstack.org/show/802902/",
+      "parentUuid": "e1089fa3_3f5c4737",
+      "revId": "b38aba3b72795b242748a6bbf47b0cb35f137702",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
