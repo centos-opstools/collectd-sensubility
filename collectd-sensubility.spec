@@ -3,8 +3,8 @@
 %undefine _debugsource_packages
 
 Name:           collectd-sensubility
-Version:        0.1.8
-Release:        2%{?dist}
+Version:        0.1.9
+Release:        1%{?dist}
 Summary:        collectd-exec extension enabling collectd to bahave like sensu-client
 License:        ASL 2.0
 URL:            https://%{golang_namespace}/%{name}
@@ -13,7 +13,7 @@ Source1:        example-config.conf
 
 BuildRequires:  gcc
 BuildRequires:  golang >= 1.2-7
-BuildRequires:  golang(github.com/infrawatch/apputils) >= 0.1
+BuildRequires:  golang(github.com/infrawatch/apputils) >= 0.4
 
 Requires:       util-linux
 
@@ -27,7 +27,8 @@ This project aims provide possibility to switch from Sensu based availability mo
 mkdir -p src/github.com/infrawatch
 ln -s ../../../ src/github.com/infrawatch/collectd-sensubility
 export GOPATH=$(pwd):%{gopath}
-go build -a -ldflags "-B 0x$(head -c20 /dev/urandom|od -An -tx1|tr -d ' \n')" -v -x -o collectd-sensubility main/main.go
+rm -f go.mod
+GO111MODULE=off go build -a -ldflags "-B 0x$(head -c20 /dev/urandom|od -An -tx1|tr -d ' \n')" -v -x -o collectd-sensubility main/main.go
 
 %install
 install -d %{buildroot}%{_bindir}
@@ -43,10 +44,20 @@ install -p -m 0755 %{SOURCE1} %{buildroot}%{_sysconfdir}/collectd-sensubility.co
 %{_sysconfdir}/collectd-sensubility.conf
 
 %changelog
+* Fri Oct 29 2021 Martin Magr <mmagr@redhat.com> - 0.1.9-1
+- Recreate log file according to config
+- Rebuild with newest apputils
+
+* Thu Apr 08 2021 Martin Magr <mmagr@redhat.com> - 0.1.8-4
+- Rebuild with newest apputils and golang-qpid-apache
+
+* Thu Feb 25 2021 Martin Magr <mmagr@redhat.com> - 0.1.8-3
+- Rebuild with newest apputils and golang-qpid-apache
+
 * Tue Oct 13 2020 Martin Magr <mmagr@redhat.com> - 0.1.8-2
 - Rebuild with fixed apputils
 
-* Tue Sep 02 2020 Martin Mágr <mmagr@redhat.com> - 0.1.8-1
+* Wed Sep 02 2020 Martin Mágr <mmagr@redhat.com> - 0.1.8-1
 - Updated to latest upstream release
 
 * Tue May 12 2020 Martin Mágr <mmagr@redhat.com> - 0.1.5-1
