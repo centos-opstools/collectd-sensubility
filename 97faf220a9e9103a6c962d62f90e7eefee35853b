@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c0eaedd_60b778c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 718
+      },
+      "writtenOn": "2022-02-03T18:38:34Z",
+      "side": 1,
+      "message": "Failure in rpmbuild-centos8s is because of \n``No matching package to install: \u0027golang(github.com/infrawatch/apputils) \u003e\u003d 0.4\u0027``\n\nFailure in rpmbuild-centos9s is because of\n``No package centos-release-opstools available.``\n\n",
+      "revId": "97faf220a9e9103a6c962d62f90e7eefee35853b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
