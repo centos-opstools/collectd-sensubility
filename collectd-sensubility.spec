@@ -4,7 +4,7 @@
 
 Name:           collectd-sensubility
 Version:        0.1.9
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        collectd-exec extension enabling collectd to bahave like sensu-client
 License:        ASL 2.0
 URL:            https://%{golang_namespace}/%{name}
@@ -44,6 +44,9 @@ install -p -m 0755 %{SOURCE1} %{buildroot}%{_sysconfdir}/collectd-sensubility.co
 %{_sysconfdir}/collectd-sensubility.conf
 
 %changelog
+* Thu Feb 03 2022 Emma Foley <efoley@redhat.com> - 0.1.9-2
+- Bump release to trigger rebuild for Centos Stream 8 & 9
+
 * Fri Oct 29 2021 Martin Magr <mmagr@redhat.com> - 0.1.9-1
 - Recreate log file according to config
 - Rebuild with newest apputils
