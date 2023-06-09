@@ -3,8 +3,8 @@
 %undefine _debugsource_packages
 
 Name:           collectd-sensubility
-Version:        0.1.9
-Release:        2%{?dist}
+Version:        0.2.1
+Release:        1%{?dist}
 Summary:        collectd-exec extension enabling collectd to bahave like sensu-client
 License:        ASL 2.0
 URL:            https://%{golang_namespace}/%{name}
@@ -13,7 +13,7 @@ Source1:        example-config.conf
 
 BuildRequires:  gcc
 BuildRequires:  golang >= 1.2-7
-BuildRequires:  golang(github.com/infrawatch/apputils) >= 0.4
+BuildRequires:  golang(github.com/infrawatch/apputils) >= 0.6
 
 Requires:       util-linux
 
@@ -44,6 +44,10 @@ install -p -m 0755 %{SOURCE1} %{buildroot}%{_sysconfdir}/collectd-sensubility.co
 %{_sysconfdir}/collectd-sensubility.conf
 
 %changelog
+* Fri Jun 09 2022 Martin Magr <mmagr@redhat.com> - 0.2.1-1
+- Additional reconnect case (rhbz#2158781)
+- Don't attempt to close Sender on error (rhbz#2179924)
+
 * Thu Feb 03 2022 Emma Foley <efoley@redhat.com> - 0.1.9-2
 - Bump release to trigger rebuild for Centos Stream 8 & 9
 
