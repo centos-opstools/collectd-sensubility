@@ -33,6 +33,23 @@
       "message": "Maybe it\u0027s worth merging this finally since there\u0027s already newer version waiting in row: https://review.rdoproject.org/r/c/centos-opstools/collectd-sensubility/+/48851",
       "revId": "81136829954617d691f99b3dad447b16d095cb69",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6c5f9f4c_942bd656",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 314
+      },
+      "writtenOn": "2023-12-07T12:30:56Z",
+      "side": 1,
+      "message": "recheck",
+      "revId": "81136829954617d691f99b3dad447b16d095cb69",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
