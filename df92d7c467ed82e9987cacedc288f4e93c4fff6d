@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c2829039_4f4c5a62",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 314
+      },
+      "writtenOn": "2023-12-07T10:44:00Z",
+      "side": 1,
+      "message": "Gonna rebase once https://review.rdoproject.org/r/c/centos-opstools/collectd-sensubility/+/47256 is merged.",
+      "revId": "df92d7c467ed82e9987cacedc288f4e93c4fff6d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
