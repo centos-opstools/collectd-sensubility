@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "da3ee5c1_870dc1e9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 314
+      },
+      "writtenOn": "2024-05-13T21:35:39Z",
+      "side": 1,
+      "message": "The fact that centos8s jobs fail is expected. What I don\u0027t understand though is why the validate-centos9s job runs on centos8s. We need to fix this and disable 8s jobs.",
+      "revId": "bca89a89aa7c2dc25f48dd7a31f27accd00cb41b",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
